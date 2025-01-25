@@ -1,50 +1,22 @@
-# React + TypeScript + Vite
+# Portfólio criado com React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Formato:
+Os commits devem ser escrito com o seguinte formato, onde o type é obrigatório e pode ser consultado no próximo tópico e a descrição descreve a ação daquele commit mais detalhadamente:
 
-Currently, two official plugins are available:
+<type>: <description>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Type
+O type pode ser um desses tipos:
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Prefixo	Descrição	Significado
+feat	Features	Uma nova funcionalidade
+fix	Correções de Erros	Uma correção de bug
+docs	Documentação	Apenas mudanças na documentação
+style	Estilos	Mudanças em relação a estilização
+refactor	Refatoração de Código	Uma alteração de código que não corrige um bug nem adiciona uma funcionalidade
+perf	Melhorias de Performance	Uma alteração de código que melhora o desempenho
+test	Testes	Adição de testes em falta ou correção de testes existentes
+build	Builds	Mudanças que afetam o sistema de build ou dependências externas (exemplos de escopos: gulp, broccoli, npm)
+ci	Integrações Contínuas	Alterações em nossos arquivos e scripts de configuração de CI (exemplos de escopos: Travis, Circle, BrowserStack, SauceLabs)
+chore	Tarefas	Outras mudanças que não modificam arquivos de código-fonte ou de teste
+revert	Reverter	Reverte um commit anterior
